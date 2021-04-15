@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +42,7 @@ Auth::routes();
 Route::get('all/products','FrontProductListController@moreProducts')->name('more.product');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('subcatories/{id}','ProductController@loadSubCategories');
+
 Route::group(['prefix'=>'auth','middleware'=>['auth','isAdmin']],function(){
 	Route::get('/dashboard', function () {
     return view('admin.dashboard');

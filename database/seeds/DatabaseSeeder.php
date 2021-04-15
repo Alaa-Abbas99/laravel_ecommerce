@@ -69,8 +69,6 @@ class DatabaseSeeder extends Seeder
         	'email'=>'admin@gmail.com',
         	'password'=>bcrypt('password'),
         	'email_verified_at'=>NOW(),
-        	'address'=>'Australia',
-        	'phone_number'=>'0576232',
         	'is_admin'=>1
         ]);
     }
